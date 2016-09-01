@@ -1,0 +1,89 @@
+<!doctype html>
+
+<html>
+  <head>
+    <style>
+      html {
+        background-color: grey;
+      }
+      body {
+        width: 500px;
+        margin: auto;
+        background-color: white;
+      }
+      .logo {
+        float: left;
+      }
+      .header {
+        overflow: hidden;
+      }
+      .navigation__open {
+        float: right;
+        margin-top: 30px;
+      }
+      .navigation__container {
+        display: none;
+      }
+      .navigation__container:target {
+        display: block;
+      }
+      .navigation__open, .navigation__close {
+        display: block;
+      }
+      .navigation__close {
+        float: right;
+        margin-bottom:
+      }
+
+      .navigation2__toggle {
+        float: right;
+        margin-top: -50px;
+      }
+      .navigation2__toggle--close {
+        display: none;
+      }
+      .navigation2__container:target .navigation2__toggle--close {
+        display: block;
+      }
+      .navigation2__container:target .navigation2__toggle--open {
+        display: none;
+      }
+      .navigation2__container {
+        margin-top: -50px;
+        padding-top: 50px;
+        height: 0;
+        overflow: hidden;
+      }
+      .navigation2__container:target {
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="logo">Simple mobile nav</h1>
+      <a class="navigation__open" href="#menu" title="open menu">open menu</a>
+    </header>
+
+    <nav class="navigation__container" id="menu">
+      <a class="navigation__close" href="#" title="close menu">close menu</a>
+      <div><a href="#">Item one</a></div>
+      <div><a href="#">A second item</a></div>
+      <div><a href="#">Tertiary</a></div>
+    </nav>
+
+    <hr/>
+
+    <header class="header">
+      <h1 class="logo">Slightly more complex</h1>
+    </header>
+
+    <nav class="navigation2__container" id="menu2">
+      <a class="navigation2__toggle navigation2__toggle--open" href="#menu2" title="open menu">open menu</a>
+      <a class="navigation2__toggle navigation2__toggle--close" href="#" title="close menu">close menu</a>
+      <div><a href="#">Item one</a></div>
+      <div><a href="#">A second item</a></div>
+      <div><a href="#">Tertiary</a></div>
+    </nav>
+  </body>
+</html>
